@@ -1,7 +1,9 @@
-require("dotenv").config();
+//require("dotenv").config();
 
 const express = require("express");
 const app = express();
+
+/*
 const cors = require("cors");
 const authRoute = require("./router/auth-router");
 const contactRoute = require("./router/contact-router");
@@ -29,20 +31,27 @@ app.use("/api/data", serviceRoute);
 app.use("/api/admin", adminRoute);
 app.use("/api", buySellRoute);
 
+*/
+
 app.get("/", (req, res) => {
   res.status(200).send("Welcome to App");
 });
-
+/*
 app.get("/login", (req, res) => {
   res.status(200).send("Welcome to Login page");
 });
 
 app.use(errorMiddleware);
-
+*/
 const PORT = 5000;
-
+/*
 connectDb().then(() => {
   app.listen(PORT, () => {
     console.log(`Server is running at port 5000`);
   });
 });
+*/
+
+app.listen(PORT, () => {
+    console.log(`Server is running at port 5000`);
+  });
